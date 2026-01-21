@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>DinoPlanet| Eymen Arcade</title>
+
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: "Comic Sans MS", "Trebuchet MS", Arial, sans-serif;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            padding: 30px 20px 10px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        .back-btn {
+            margin-top: 10px;
+            display: inline-block;
+            padding: 8px 16px;
+            background: rgba(255,255,255,0.15);
+            border-radius: 10px;
+            text-decoration: none;
+            color: white;
+            transition: background 0.2s;
+        }
+
+        .back-btn:hover {
+            background: rgba(255,255,255,0.3);
+        }
+
+        .game-container {
+            max-width: 1100px;
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .game-frame {
+            width: 100%;
+            height: 600px;
+            background: black;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .game-info {
+            margin-top: 20px;
+            background: rgba(255,255,255,0.08);
+            backdrop-filter: blur(8px);
+            border-radius: 16px;
+            padding: 20px;
+        }
+
+        .game-info h2 {
+            margin-top: 0;
+        }
+        .game-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /* cover da olabilir */
+            background: black;
+        }
+
+
+        @media (max-width: 768px) {
+            .game-frame {
+                height: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Dino Planet</h1>
+        <a href="index.html" class="back-btn">← Ana Menüye Dön</a>
+    </header>
+
+    <div class="game-container">
+
+        <!-- GAME AREA -->
+        <div class="game-frame">
+            <!-- OPTION 1: iframe game -->
+            <img src="https://github.com/eymen1313/SanalArsiv/raw/fe790f96394aef8f4b88bc57308416baaab49934/g%C3%B6rsel_2025-12-26_161948664.png"></img>
+
+            <!-- OPTION 2: If game is directly on this page, remove iframe -->
+        </div>
+
+        <!-- GAME INFO -->
+        <div class="game-info">
+            <h2>Oyun Bilgileri</h2>
+            <p>
+                10 Aralık 2024 de yayınlandı. 2 kişilik dinazor seçimli arena 1v1 oyunu. devam etmedi ve terk edildi.
+            </p>
+
+            <p>
+                <strong>Kontroller:</strong><br>
+                Oyuncu 1: WASD / Q la skill<br>
+                Oyuncu 2: yön tuşları / L le skill
+            </p>
+            <p>
+                <strong> Açıklama </strong><br>
+                Oyunun amacı rakibin canını bitirip kazanmak. oyunda oynanabilir şuanda 3 karakter var<br><br>
+                <strong> T-Rex </strong><br>
+                yeteneği ile rakibe düz bir çizgide saldırıp ona vurmaya devam ederken kısa bir süreliğine sersemletebilir. ultisi ise öne doğru hızla atılarak önüne çıkanlara büyük hasar verir <br>
+                <strong> Raptor </strong><br>
+                yeteneği ile önündeki bir çizgideki rakiplere hasar verir. diğer karakterlerden daha hızlıdır. ultisi ise biraz önüne dorğu zıplayarak rakibine büyük hasar verir<br>
+                <strong> Diloposaurus </strong><br>
+                Yeteneği ile uuzn bir mesafeden zehir tükürerek isabet eden rakiplere hız ve zıplama debuff u verir. yavaşlayan rakipler zehir etkisi boyunca haraket edemez. ultisi ise onu bir süreliğine güçlendirir ve canını bir miktar doldurur. aynı zamanda hasarında ve doldurma hızında artış olur.<br>
+            </p>
+
+            <p>
+                <strong>Platform bilgileri</strong><br>
+                <a href="https://github.com/eymen1313/Game/raw/60ce05b5458e6bf0335ae8e09439500cd878d8fc/Dinasour%202.5%20Demo%20fullgame.zip">oynanabilir sürüm (Windows): ✅</a><br>
+                oynanabilir sürüm (Android): ❎<br>
+                oynanabilir sürüm (Dokunmatik-Windows): ❎<br>
+                <a href="https://github.com/eymen1313/Game/raw/60ce05b5458e6bf0335ae8e09439500cd878d8fc/Dinasour%202.5%20%20Demo%20Code.rar">kodlar (windows): ✅</a><br>
+                kodlar (Android): ❎<br>
+                kodlar (Dokunmatik-Windows): ❎<br>
+                
+            </p>
+        </div>
+
+    </div>
+
+</body>
+</html>

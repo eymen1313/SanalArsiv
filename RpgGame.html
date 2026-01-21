@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>RPG game| Eymen Arcade</title>
+
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: "Comic Sans MS", "Trebuchet MS", Arial, sans-serif;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            padding: 30px 20px 10px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        .back-btn {
+            margin-top: 10px;
+            display: inline-block;
+            padding: 8px 16px;
+            background: rgba(255,255,255,0.15);
+            border-radius: 10px;
+            text-decoration: none;
+            color: white;
+            transition: background 0.2s;
+        }
+
+        .back-btn:hover {
+            background: rgba(255,255,255,0.3);
+        }
+
+        .game-container {
+            max-width: 1100px;
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .game-frame {
+            width: 100%;
+            height: 600px;
+            background: black;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .game-info {
+            margin-top: 20px;
+            background: rgba(255,255,255,0.08);
+            backdrop-filter: blur(8px);
+            border-radius: 16px;
+            padding: 20px;
+        }
+
+        .game-info h2 {
+            margin-top: 0;
+        }
+        .game-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /* cover da olabilir */
+            background: black;
+        }
+
+
+        @media (max-width: 768px) {
+            .game-frame {
+                height: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>RPG game</h1>
+        <a href="index.html" class="back-btn">← Ana Menüye Dön</a>
+    </header>
+
+    <div class="game-container">
+
+        <div class="game-frame">
+            <img src="https://github.com/eymen1313/SanalArsiv/raw/28edb03cd7904c1679d1506fcdb246aa7ab5620c/image.png"></img>
+
+        </div>
+
+        <!-- GAME INFO -->
+        <div class="game-info">
+            <h2>Oyun Bilgileri</h2>
+            <p>
+                10 ekim 2024 de yayınlandı. RPG temalı bir oyun. tutarial yapıldı fakat yaşanan teknik bir sorundan dolayı kaynak kodları kaybedildi ve tamamen geliştirme durdu
+            </p>
+
+            <p>
+                <strong>Kontroller:</strong><br>
+                WASD
+            </p>
+            <p>
+                <strong> Açıklama </strong><br>
+                oyun geniş ve büyük düşman keserek büyünülecek bir rpg oyunu olması planlansada daha erken sürümlerde oyunun kaynak kodları kaybedildi ve geliştirme aşaması durduruldu
+            </p>
+
+            <p>
+                <strong>Platform bilgileri</strong><br>
+                <a href="https://github.com/eymen1313/Game/raw/60ce05b5458e6bf0335ae8e09439500cd878d8fc/Pre-Alpha%203.5-1.rar">oynanabilir sürüm (Windows): ✅</a><br>
+                oynanabilir sürüm (Android): ❎<br>
+                oynanabilir sürüm (Dokunmatik-Windows): ❎<br>
+                kodlar (windows): ❎</a><br>
+                kodlar (Android): ❎<br>
+                kodlar (Dokunmatik-Windows): ❎<br>
+                
+            </p>
+        </div>
+
+    </div>
+
+</body>
+</html>
