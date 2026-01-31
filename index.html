@@ -2,7 +2,7 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <title>Eymen Arcade</title>
+    <title>Tetris| Eymen Arcade</title>
 
     <style>
         body {
@@ -11,153 +11,126 @@
             font-family: "Comic Sans MS", "Trebuchet MS", Arial, sans-serif;
             background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
             color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         header {
+            padding: 30px 20px 10px;
             text-align: center;
-            padding: 40px 20px 20px;
         }
 
         header h1 {
-            font-size: 3rem;
-            font-weight: normal;
-            letter-spacing: 2px;
             margin: 0;
+            font-size: 2.5rem;
         }
 
-        .container {
+        .back-btn {
+            margin-top: 10px;
+            display: inline-block;
+            padding: 8px 16px;
+            background: rgba(255,255,255,0.15);
+            border-radius: 10px;
+            text-decoration: none;
+            color: white;
+            transition: background 0.2s;
+        }
+
+        .back-btn:hover {
+            background: rgba(255,255,255,0.3);
+        }
+
+        .game-container {
             max-width: 1100px;
-            margin: auto;
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .game-frame {
+            width: 100%;
+            height: 600px;
+            background: black;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .game-info {
+            margin-top: 20px;
+            background: rgba(255,255,255,0.08);
+            backdrop-filter: blur(8px);
+            border-radius: 16px;
             padding: 20px;
         }
 
-        .game-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
+        .game-info h2 {
+            margin-top: 0;
         }
-
-        .game-card {
-            background: rgba(255, 255, 255, 0.08);
-            backdrop-filter: blur(8px);
-            border-radius: 16px;
-            overflow: hidden;
-            cursor: pointer;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .game-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 12px 30px rgba(0,0,0,0.4);
-        }
-
-        .game-card img {
+        .game-frame img {
             width: 100%;
-            height: 160px;
-            object-fit: cover;
-            display: block;
+            height: 100%;
+            object-fit: contain; /* cover da olabilir */
+            background: black;
         }
 
-        .game-card .title {
-            padding: 15px;
-            text-align: center;
-            font-size: 1.1rem;
-        }
 
-        @media (max-width: 900px) {
-            .game-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 600px) {
-            .game-grid {
-                grid-template-columns: 1fr;
+        @media (max-width: 768px) {
+            .game-frame {
+                height: 400px;
             }
         }
     </style>
 </head>
 <body>
 
-
     <header>
-        <h1>Eymen Oyunlar Arşivi</h1>
-        <h3>çürümekte olan github projelerim için dijital mezarlık</h2>
+        <h1>Tiny Alchemist</h1>
+        <a href="index.html" class="back-btn">← Ana Menüye Dön</a>
     </header>
-    
 
+    <div class="game-container">
 
-    <div class="container">
-        <div class="game-grid" id="gameGrid"></div>
+        <div class="game-frame">
+            <img src="https://github.com/eymen1313/SanalArsiv/raw/749db9b459933445ff696f811328332e1a0755a0/image.png"></img>
+
+        </div>
+
+        <!-- GAME INFO -->
+        <div class="game-info">
+            <h2>Tiny Alchemist</h2>
+            <p>
+                "1.5 Hour Games" serisinin ilk oyunudur. 30 ocak 2026 yılında yayınlandı.
+            </p>
+
+            <p>
+                <strong>Kontroller:</strong><br>
+                Mouse gerek o kadar<br>
+            </p>
+            <p>
+                <strong> Açıklama </strong><br>
+                1.5 Hour games serisi benim tarafımdan sadece 1.5 saat içinde temelleri oturtulup küçük düzeltmeler ve pürüz gidermeler ile yayınlanan oyunları içeren bir seridir
+            </p>
+
+            <p>
+                <strong>Platform bilgileri</strong><br>
+                <a href="https://github.com/eymen1313/SanalArsiv/raw/40645fbc462c4e2f1a633c0cef164db4571f40ba/big%20alchemist.zip">oynanabilir sürüm (Windows): ✅</a><br>
+                <a>oynanabilir sürüm (Android): ❎</a><br>
+                <a>oynanabilir sürüm (Dokunmatik-Windows): ❎</a><br>
+
+                <a href="https://github.com/eymen1313/SanalArsiv/raw/40645fbc462c4e2f1a633c0cef164db4571f40ba/big%20alchemist%20codes.rar">Tüm kodlar</a>
+                
+            </p>
+        </div>
+
     </div>
-
-    <script>
-
-        const games = [
-            {
-                oyunIsmi: "DinoPlanet",
-                oyunKapakPng: "https://github.com/eymen1313/SanalArsiv/raw/fe790f96394aef8f4b88bc57308416baaab49934/g%C3%B6rsel_2025-12-26_161948664.png",
-                oyunRedirectLink: "DinoPlanet.html"
-            },
-            {
-                oyunIsmi: "RPG oyunu",
-                oyunKapakPng: "https://github.com/eymen1313/SanalArsiv/raw/28edb03cd7904c1679d1506fcdb246aa7ab5620c/image.png",
-                oyunRedirectLink: "RpgGame.html"
-            },
-            {
-                oyunIsmi: "TankTrouble",
-                oyunKapakPng: "https://github.com/eymen1313/SanalArsiv/raw/438b6cc6805d6c49ea3ab54ff6f0862fc1047e17/image.png",
-                oyunRedirectLink: "TankTrouble.html"
-            },
-            {
-                oyunIsmi: "Tetris",
-                oyunKapakPng: "https://github.com/eymen1313/SanalArsiv/raw/0d2d3196cdca6678cb19bedda909ea7385a50f7b/g%C3%B6rsel_2026-01-14_125907507.png",
-                oyunRedirectLink: "Tetris.html"
-            },
-            {
-                oyunIsmi: "Boş",
-                oyunKapakPng: "images/tower-defense.png",
-                oyunRedirectLink: "games/tower-defense/index.html"
-            },
-            {
-                oyunIsmi: "Boş",
-                oyunKapakPng: "images/tower-defense.png",
-                oyunRedirectLink: "games/tower-defense/index.html"
-            },
-            {
-                oyunIsmi: "Boş",
-                oyunKapakPng: "images/tower-defense.png",
-                oyunRedirectLink: "games/tower-defense/index.html"
-            },
-            {
-                oyunIsmi: "Boş",
-                oyunKapakPng: "images/tower-defense.png",
-                oyunRedirectLink: "games/tower-defense/index.html"
-            },
-            {
-                oyunIsmi: "Boş",
-                oyunKapakPng: "images/tower-defense.png",
-                oyunRedirectLink: "games/tower-defense/index.html"
-            }
-        ];
-
-        const grid = document.getElementById("gameGrid");
-
-        games.forEach(game => {
-            const card = document.createElement("div");
-            card.className = "game-card";
-            card.onclick = () => {
-                window.location.href = game.oyunRedirectLink;
-            };
-
-            card.innerHTML = `
-                <img src="${game.oyunKapakPng}" alt="${game.oyunIsmi}">
-                <div class="title">${game.oyunIsmi}</div>
-            `;
-
-            grid.appendChild(card);
-        });
-    </script>
 
 </body>
 </html>
